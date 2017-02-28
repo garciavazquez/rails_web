@@ -13,5 +13,6 @@ class HomeController < ApplicationController
   end
 
   def contact
+    @ip = request.remote_ip
   end
 end
