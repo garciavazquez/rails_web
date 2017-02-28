@@ -1,11 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# rails_web
+A basic web
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby 2.3.3p222
 
 * System dependencies
 
