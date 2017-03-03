@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <h1> Plantilla principal </h1>
+    <ul>
+      <li><%= link_to "Inicio", :action=>"index" %> </li>
+      <li><%= link_to "Servicios", :action=>"services" %> </li>
+      <li><%= link_to "Quiénes somos", :action=>"about_us" %> </li>
+      <li><%= link_to "Contacto", :action=>"contact" %> </li>
+      <li><%= link_to "Localización", :action=>"location" %> </li>
+      <li><%= link_to "Google", 'https://www.google.es' %> </li>
+    </ul>
     <%= yield %>
   </body>
 </html>

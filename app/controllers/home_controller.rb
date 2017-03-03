@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+
+  layout "application"
   def index
 
     @title = 'El titulo de la variable de instancia en index'
@@ -10,9 +12,18 @@ class HomeController < ApplicationController
   end
 
   def about_us
+    @title = 'Quiénes somos?'
   end
 
   def contact
     @ip = request.remote_ip
+  end
+
+  def location
+    @title = 'Localización'
+  end
+
+  def services
+    @title = 'Servicios'
   end
 end
