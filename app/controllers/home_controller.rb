@@ -24,6 +24,10 @@ class HomeController < ApplicationController
   end
 
   def services
-    @title = 'Servicios'
+    if request.get?
+      @title = 'Servicios - GET'
+    else
+      @title = "Servicios - POST #{params[:id]}"
+    end
   end
 end
