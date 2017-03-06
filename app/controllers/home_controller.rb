@@ -21,7 +21,7 @@ class HomeController < ApplicationController
   end
 
   def location
-    @title = 'Localización'
+    @id = params[:id]
   end
 
   def services

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'home/contact'
 
   get 'home/location'
+  post 'home/location'
 
   get 'home/services'
   post 'home/services'

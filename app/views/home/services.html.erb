@@ -2,9 +2,9 @@
 <h2>Añadir usuario</h2>
 <%= form_tag("/home/services") do%>
   <%= label_tag "Nombre" %>
-  <%= text_field_tag "name" %>
+  <%= text_field_tag "name", nil, placeholder: "Nombre" %>
   <%= label_tag "Contraseña" %>
-  <%= text_field_tag "password" %>
+  <%= password_field_tag "password", nil, placeholder: "Contraseña"%>
   <%= submit_tag "Guardar" %>
 <% end %>
 <h2>Lista de usuarios</h2>
