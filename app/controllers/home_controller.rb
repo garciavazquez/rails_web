@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   def index
 
     @title = 'El titulo de la variable de instancia en index'
+    @@db = DB.new
 
     respond_to do |format|
       format.html
@@ -24,10 +25,14 @@ class HomeController < ApplicationController
   end
 
   def services
-    if request.get?
-      @title = 'Servicios - GET'
-    else
-      @title = "Servicios - POST #{params[:id]}"
+    if request.post?
+      user = User.new params[:name], params[:password]
+      params[:name]
+      puts "Usuario"
+      puts user.name
+      @@db.add_user! user
     end
+    @users = @@db.users
+
   end
 end

@@ -1,3 +1,13 @@
-<h1>Home#contact</h1>
-<p>Find me in app/views/home/contact.html.erb</p>
-<p><%= @title %> </p>
+<h1>Usuarios</h1>
+<h2>Añadir usuario</h2>
+<%= form_tag("/home/services") do%>
+  <%= label_tag "Nombre" %>
+  <%= text_field_tag "name" %>
+  <%= label_tag "Contraseña" %>
+  <%= text_field_tag "password" %>
+  <%= submit_tag "Guardar" %>
+<% end %>
+<h2>Lista de usuarios</h2>
+<% @users.each do |u| %>
+<p><%= u.name%></p>
+<% end %>

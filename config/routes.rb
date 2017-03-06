@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'errors/routes'
+  get 'errors/route'
 
   root :to => 'home#index'
 
